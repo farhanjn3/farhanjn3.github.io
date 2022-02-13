@@ -1,0 +1,156 @@
+.container-center-1 {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 9999999999999999999;
+}
+
+.container-center-1.bg-light.loadd.d-none {
+    display: none;
+    transition: all 2s ease-out;
+}
+
+.container-center-1.bg-light.loadd .animation-bounce {
+    animation: bounce 1.65s infinite ease;
+}
+
+@keyframes bounce {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    10% {
+        transform: scale(1.1, .9) translateY(0);
+    }
+
+    30% {
+        transform: scale(.9, 1.1) translateY(-100px);
+    }
+
+    50% {
+        transform: scale(1, 1) translateY(0);
+    }
+
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
+}
+
+.container-center-1.bg-light.loadd .shadow-bounce {
+    background-color: #00000011;
+    width: 90px;
+    height: 10px;
+    border-radius: 50%;
+    animation: shrink 1.45s infinite ease;
+}
+
+@keyframes shrink {
+    50% {
+        transform: scaleX(0.6);
+    }
+}
+
+.container-center-2 {
+    position: fixed;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+header .background {
+    width: 100%;
+    height: 165px;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(background.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+
+header .d-flex.flex-column-reverse {
+    padding-top: 100px;
+}
+
+header .info {
+    margin-top: 6px;
+}
+
+header .info .sosmed .icon {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: #212529b3;
+    padding: 10px 10px;
+    border-radius: 50%;
+    border: 1px solid #00000013;
+    box-shadow: 0 0.125rem 0.25rem #00000013;
+    -webkit-box-shadow: 0 0.125rem 0.25rem #00000013;
+    -moz-box-shadow: 0 0.125rem 0.25rem #00000013;
+    -o-box-shadow: 0 0.125rem 0.25rem #00000013;
+    margin-left: 4px;
+    margin-right: 4px;
+}
+
+header .info .sosmed .icon:hover,
+header .info .sosmed .icon:focus {
+    color: #2397f2;
+    box-shadow: 0 0.125rem 0.25rem #2397f2;
+    -webkit-box-shadow: 0 0.125rem 0.25rem #2397f2;
+    -moz-box-shadow: 0 0.125rem 0.25rem #2397f2;
+    -o-box-shadow: 0 0.125rem 0.25rem #2397f2;
+}
+
+header .profile img {
+    pointer-events: none;
+    border-radius: 50%;
+    padding: 0.35rem;
+    background-color: #f8f9fa;
+}
+
+.music {
+    position: fixed;
+    right: 14px;
+    bottom: 14px;
+}
+
+.music .icon {
+    display: flex;
+    align-items: center;
+    color: #f8f9fa;
+    padding: 12px 12px;
+    border: none;
+    border-radius: 50%;
+    background: #121212;
+    background: linear-gradient(39deg, rgba(18, 18, 18, 1) 0%, #595959 99%);
+}
+
+.activePlayMusic {
+    animation: activePlayMusic 2.3s linear infinite;
+}
+
+@keyframes activePlayMusic {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 575px) {
+    .container-responsive {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    header .background {
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+}
